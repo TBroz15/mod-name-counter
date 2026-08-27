@@ -1,0 +1,78 @@
+---
+import { format } from "date-fns";
+import { ModNameCounter } from "../components/custom-ui/counter/ModNameCounter";
+import { ThingNameCounter } from "../components/custom-ui/counter/ThingNameCounter";
+
+const INITIAL_MOD_NAME_AMOUNT = 0;
+const MOD_NAME_PER_SEC_VELOCITY = 0.0006430041152263374;
+
+const INITIAL_THING_NAME_AMOUNT = 0;
+const THING_NAME_PER_SEC_VELOCITY = 0.0012860082304527;
+
+const UPDATED_DATE = new Date(
+    "Thu Aug 27 2026 14:14:01 GMT+0800 (Taiwan Standard Time)",
+);
+---
+
+<div class="flex flex-col gap-1 justify-center h-screen">
+    <div class="flex flex-col gap-1 items-center text-lg">
+        <ModNameCounter
+            initialAmount={INITIAL_MOD_NAME_AMOUNT}
+            amountPerSec={MOD_NAME_PER_SEC_VELOCITY}
+            updatedDate={UPDATED_DATE}
+            client:load
+        />
+        <div
+            class="drop-shadow-[0_0_128px_rgba(255,255,255,0.7)] text-7xl md:text-9xl"
+        >
+        </div>
+        <span class="text-2xl"><i>"mod name?"</i> comments</span>
+
+        <span class="text-center">
+            and
+            {" "}
+
+            <ThingNameCounter
+                initialAmount={INITIAL_THING_NAME_AMOUNT}
+                amountPerSec={THING_NAME_PER_SEC_VELOCITY}
+                updatedDate={UPDATED_DATE}
+                client:load
+            />
+
+            {" "}
+            <br class="block md:hidden" />
+
+            <i>
+                "<span class="font-[JetBrains_Mono]">(insert thing)</span> name?"
+            </i>
+            {" "}
+            comments
+        </span>
+        <span class="text-center px-4">
+            inside of
+            {" "}
+            TuxeBro's YouTube Channel
+            {" "}
+            <a
+                href="https://www.youtube.com/@TBroz15"
+                class="text-primary underline"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                (@TBroz15)
+            </a>.
+        </span>
+
+        <p class="text-center mt-4">
+            Updated as of
+            {" "}
+            <br class="block md:hidden" />
+            <span class="font-[JetBrains_Mono]"
+                >???
+                <!-- {format(UPDATED_DATE, "MMMM d, yyyy 'at' hh:mm a")} -->
+            </span>.
+        </p>
+
+        <p class="mt-8 text-center text-gray-400 px-4">Scroll down for FAQ</p>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+---
+import { Picture } from "astro:assets";
+import abductorImage from "../../assets/abductor.png";
+import horseJPG from "../../assets/horse.jpg";
+import { ABDUCTOR_IMAGE_ID, HORSE_IMAGE_ID } from "../../consts";
+---
+
+<Picture
+    class="fixed z-10 bottom-0 h-32 md:h-48 w-fit rotate-0 -translate-x-full"
+    id={HORSE_IMAGE_ID}
+    src={horseJPG}
+    formats={["webp", "avif", "jpg"]}
+    alt="Horse image"
+/>
+
+<Picture
+    class="fixed z-10 bottom-0 right-0 h-32 md:h-48 w-fit translate-y-full drop-shadow-[0_0px_2px_#ffffff]"
+    id={ABDUCTOR_IMAGE_ID}
+    src={abductorImage}
+    formats={["webp", "avif", "jpg"]}
+    alt="Abductor"
+/>

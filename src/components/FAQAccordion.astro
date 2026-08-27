@@ -1,0 +1,129 @@
+---
+import { Picture } from "astro:assets";
+import thisCannotContinue from "../assets/uni_the_cat_aka_big_boobs.jpg";
+import AccordionItem from "../components/custom-ui/accordion/AccordionItem.astro";
+import { JorseSpawnerButton } from "../components/very-funni-easter-egg/JorseSpawnerButton";
+
+const FAQ_ACCORDION_GROUP_NAME = "faq-accordion";
+---
+
+<div class="px-4 sm:px-12 md:px-24 lg:px-48 flex flex-col gap-4">
+    <span>
+        <h2 class="text-2xl font-bold">FAQ</h2>
+    </span>
+
+    <div class="flex flex-col gap-2">
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">What is this?</p>
+            <Fragment slot="content"
+                >A website made to display an estimate of comments like "mod
+                name?" from my channel.</Fragment
+            >
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">Who is "TuxeBro?"</p>
+            <Fragment slot="content"
+                >Me, a sentient rock who makes Minecraft Create Mod videos,
+                thats all.</Fragment
+            >
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">"What is the 'mod name?' joke?"</p>
+            <Fragment slot="content"
+                >Basically a running joke made by my viewers, sarcastically not
+                knowing the mod despite the names of the mod are already added
+                into my description and title.
+            </Fragment>
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">"Was the 'mod name?' joke that bad?"</p>
+            <Fragment slot="content">
+                <div>
+                    As TuxeBro, it's a <i>meh</i> joke. Similar how DougDoug felt
+                    about "BALD" jokes. Or either Yahiamice and his fans' five hundred
+                    "<JorseSpawnerButton client:idle />" comments within every
+                    comment section of his.
+                </div>
+
+                <div>
+                    Not even that mad, just mildly annoyed. But I lowkey
+                    appreciate how a dumb running joke settled a creator's
+                    distinct personality or branding in a weird way. And yea, it
+                    is what it is lol.
+                </div>
+            </Fragment>
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">Are the numbers even accurate?</p>
+            <Fragment slot="content">
+                <div>
+                    Nope. I ran a separate local program that uses the YouTube
+                    API to scan every comment from every video I made, and track
+                    the "velocity" and amount of comments with the words like
+                    "mod name?" and stuff. After that, I update this site with
+                    the said velocity and the amount of comments and the website
+                    will do a rough estimate of how many comments are there.
+                </div>
+
+                <div>
+                    And YouTube API does not actually get EVERY comment inside
+                    my channel. It does not include comments that isn't from a
+                    video (more specifically text/image posts) and especially
+                    spam comments.
+                </div>
+
+                <div>
+                    I will occasionally update the data whenever I upload a
+                    video or whenever I feel like it.
+                </div>
+            </Fragment>
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">
+                "I want to unironically spam the joke by 500 times because I
+                wanna see the counters go high! Can I?"
+            </p>
+            <Fragment slot="content">
+                <div class="text-lg font-bold">NEVER DO THAT.</div>
+
+                <div>
+                    If you even attempt to spam my comment section like "mod
+                    name?" because you want to see the numbers go big, <b
+                        >high chance that you will get shadow banned by
+                        YouTube's moderation and it won't increase the counter
+                        AT ALL</b
+                    >.
+                </div>
+
+                <div>
+                    I may let some comments like "mod name?" slide but please do
+                    not even try to beat a decimated h*rse.
+                </div>
+            </Fragment>
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">"Mod name?"</p>
+            <Fragment slot="content">
+                <Picture
+                    src={thisCannotContinue}
+                    formats={["webp", "avif", "jpg"]}
+                    alt="bruh"
+                />
+            </Fragment>
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">
+                "No seriously, what are the typical mods you use in your
+                videos?"
+            </p>
+            <Fragment slot="content"
+                >Stay tuned for "mod name?" 2, I will update this website with
+                the list of mods that I use.</Fragment
+            >
+        </AccordionItem>
+        <AccordionItem groupName={FAQ_ACCORDION_GROUP_NAME}>
+            <p slot="title">"WHEN IS MOD NAME 2????????"</p>
+            <Fragment slot="content">soon</Fragment>
+        </AccordionItem>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+---
+interface Props {
+    groupName: string;
+}
+const { groupName } = Astro.props;
+---
+
+<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name={groupName} />
+    <div class="collapse-title font-semibold text-lg">
+        <slot name="title">
+            <p>No Title</p>
+        </slot>
+    </div>
+    <div class="collapse-content flex flex-col gap-4">
+        <slot name="content">
+            <p>No Content</p>
+        </slot>
+    </div>
+</div>
