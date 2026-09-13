@@ -45,7 +45,7 @@ export function DefaultCounter(props: CounterProps) {
 
     return (
         <NumberFlow
-            class="font-[JetBrains_Mono] font-black"
+            class="font-[JetBrains_Mono_Variable] font-black"
             value={Math.round(counter())}
             opacityTiming={{ duration: 100, easing: "linear(0, 1)" }}
         />
