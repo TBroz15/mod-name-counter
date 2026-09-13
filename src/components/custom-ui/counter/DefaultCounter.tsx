@@ -28,7 +28,7 @@ export function DefaultCounter(props: CounterProps) {
 
         const firstInterval = setInterval(() => {
             const sum =
-                counter() + Math.round((Math.random() * initAmount) / 10);
+                counter() + Math.round((Math.random() * initAmount) / 5);
 
             if (sum < initAmount) {
                 setCounter(sum);
@@ -40,7 +40,7 @@ export function DefaultCounter(props: CounterProps) {
             const finalEstimate = getEstimateAmountFromDate(props);
             setCounter(finalEstimate);
             startIncrementInterval();
-        }, 100);
+        }, 200);
     });
 
     return (
